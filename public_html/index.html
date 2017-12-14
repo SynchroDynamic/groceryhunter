@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grocery Hunter</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link href="css/fhunter.css" rel="stylesheet" type="text/css"/>   
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="  crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+        <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>  
+        <script src="include/content.js" type="text/javascript"></script>
+        
+    </head>
+    <body>
+
+        <script>
+            $(window).ready(function () {
+                $.get("include/pages/nav.html", function (fileData) {
+                    $('#navigator').html(fileData);
+                });
+            });
+        </script>
+        <div style="width: 100%" id="navigator"></div>        
+        <div style="width:100%" id="contentPortion"></div>
+        <script>
+            $(window).ready(function () {
+                $.get("include/pages/footer.html", function (fileData) {
+                    $('footer').html(fileData);
+                });
+            });
+        </script>
+
+
+        <footer class="container-fluid text-center">
+
+        </footer>
+        <script>
+            $(window).ready(function () {
+                $.get("include/pages/modal.html", function (fileData) {
+                    $('body').append(fileData);
+                });
+            });
+
+
+            $(document).ready(function () {
+                if (window.location.href.indexOf("index.html") > -1) {
+                    window.location.href = "/javascript2Final/";
+                }
+
+            });
+
+        </script>
+    </body>
+</html>

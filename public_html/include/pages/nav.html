@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light circlehover" style="background: #CAFFBD;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>                      
+            </button>
+            <a class="navbar-brand insetshadow" href="#" onclick="setSelectValue('page', 'shop');">
+                <img height="35" src="img/kudos.png" alt="" style="display: inline-block;margin-top: -17px;"/>
+                Grocery Hunter</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#" onclick="setSelectValue('page', 'shop');">Shop</a></li>                
+                <li><a href="#" onclick="setSelectValue('page', 'leaderboards');">Leaderboards</a></li>
+                <li><a href="#" onclick="setSelectValue('page', 'about');">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="separator" class="divider"></li>
+                <li id='totalPoints'></li>
+                <li class="dropdown" id="myaccount"></li>
+                <li id="login"></li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,84 @@
+<div class="container-fluid text-center">    
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+
+        </div>
+        <div class="col-sm-8 text-left"> 
+            <div id="messages"></div>
+            <h1>Add a Product</h1>
+            <form id="aForm">
+                <div class="form-group">
+                    <label for="pName">Product Name</label>
+                    <input type="text" class="form-control tTip" list="search" id="pName"  placeholder="Product Name" title="Describe exactly what the product is. Include the Brand and full name as seen on the packaging.">
+                    <datalist id="search">
+                    </datalist>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="pPrice">Product Price</label>
+                        <input type="text" class="form-control tTip" id="pPrice" placeholder="10.00" title='What price did you find your product for? Do not add a "$" sign. This should be the price of the item before tax.'>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="pPricePer">Price Per</label>
+                        <input type="text" class="form-control tTip" id="pPricePer" placeholder="Quantity/Weight" title="Add the most relavant representation of size. You can use weight, volume, count, or any other useful measurement."> 
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pCategory">Department</label>
+                    <input type="text" class="form-control tTip" list="category" id="pCategory"  placeholder="Enter a Department" title="This is the grocery store department the product was located in. If you see the department in the dropdown, use that one, or make your own.">
+                    <datalist id="category">
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="pDescription">Product Description</label>
+                    <textarea class="form-control tTip" id="pDescription" rows="3" title="Add as much detail for this item as you can. This should include any writing on the box. Please do not include opinions. After you add the item you can then add a review on the item. Reviews allow you to share your opinion on the product."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pImage1">Product Image</label>
+                    <button type="button" id="pImage1" class="btn btn-success tTip" onclick="document.getElementById('pImage').click();" title="Max Size is 5MB.">
+                        <span class="glyphicon glyphicon-plus"  aria-hidden="true"></span> Image
+                    </button>
+                    <label id="fileName"></label>
+                    <input type="file" style="display:none;" id="pImage" name="file" accept="image/*"/>
+                </div>
+                <script>$('#pImage').on('change', function () {
+                        $('#fileName').text(this.files[0].name);
+                    });</script>
+                <div class="form-group">
+                    <label for="pLocation">Product Location</label>
+                    <input type="text" class="form-control tTip" id="pLocation" placeholder="100 E Main City, State, Zip" title="Add the location where the store is located.">
+                </div>    
+                <div class="form-group">
+                    <label for="pStore">Store Name</label>
+                    <input type="text" class="form-control tTip" id="pStore" placeholder="Sentry" title="Add the store's name where you found your product.">
+                </div>  
+
+                <button type="submit" class="btn btn-success" id="pAdd">Add Product</button>
+            </form>
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-success" id="goHome" style="display: none;">Go Home</button>
+            </div>
+        </div>
+        <div class="col-sm-2 sidenav">
+
+        </div>
+    </div>
+</div>
+<script>
+    
+    $('.tTip').tooltip({
+    position: {
+        my: "center bottom",
+        at: "center top-10",
+        collision: "flip",
+        using: function( position, feedback ) {
+            $( this ).addClass( feedback.vertical )
+                .css( position );
+        }
+    }
+});
+
+</script>

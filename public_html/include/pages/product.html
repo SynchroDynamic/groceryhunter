@@ -1,0 +1,217 @@
+     
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10" id="productData">
+            <div class="col-sm-12" id="pName"></div>
+            <div class="col-sm-12">
+                <div class="col-sm-6" id="pImage"></div>
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-success" id="addToMyList">                        
+                        <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+                        My List</button>
+                    <div class="addPop" style="text-align: center;"><h4>Product added to Product List</h4> <img height="35" src="img/kudos.png" alt="" style="display: inline-block;"/></div>
+                    <h4>Add Another Price</h4>
+                    <form id="addPrice">
+                        <div class="form-group">
+                            <label for="pStore">Store</label>
+                            <input type="text" class="form-control tTip" id="pStore"  placeholder="Sentry" title="In what store did you find this new price?">
+                        </div>
+                        <div class="form-group">
+                            <label for="pLocation">Address</label>
+                            <input type="text" class="form-control tTip" id="pLocation"  placeholder="STREET, CITY, STATE ZIP" title="What is the address of the store. Please provide Street City, State, and Zipcode.">
+                        </div>
+                        <div class="form-group">
+                            <label for="pPrice">Price</label>
+                            <input type="text" class="form-control tTip" id="price"  placeholder="9.99" title='What price did you find your product for? Do not add a "$" sign. This should be the price of the item before tax.'>
+                        </div>
+
+                        <button type="button" class="btn btn-success" id="priceAdd">Add New Price</button>
+                    </form>
+
+                </div>
+                <div class="col-sm-12">
+                    <h4>Prices Found</h4>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Price</th>
+                                <th scope="col">Store</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Correct?</th>
+                                <th scope="col">Reliability</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pPrice">
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>  
+            <div class="col-sm-12" id="pAuthor"></div>
+            <div class="col-sm-12" id="pDescription"></div>
+            <div class="col-sm-12" id="reviewTitle"><h3>Reviews</h3></div>
+            <div class="col-sm-12" id="reviewAVG"></div>
+            <div class="col-sm-12" id="pReviews"></div>
+            <div class="col-sm-12">      
+                <h2>My Review</h2>
+                <div style="border: solid 1px; padding: 40px;">                            
+                    <div>
+                        <div id="starRating1" class="starRating" style="display: inline-block;"></div>
+                        <div id="starRating2" class="starRating" style="display: inline-block;"></div>
+                        <div id="starRating3" class="starRating" style="display: inline-block;"></div>
+                        <div id="starRating4" class="starRating" style="display: inline-block;"></div>
+                        <div id="starRating5" class="starRating" style="display: inline-block;"></div>
+                    </div>
+                    <input type="hidden" id="rating">
+                    <label for="title" class="form-group">Review Title</label><br /><input type="text" id="title" style="width:100%;" class="input-sm" /><br />
+                    <label for="content">Review</label><textarea rows="5" cols="2" id="content" class="input-sm textarea1"></textarea><br /><br />
+                    <button type="button" class="btn btn-success" style="position: relative; float: right;" id="addReview">Add Review</button>
+                </div>
+
+            </div>                    
+            <script>
+
+
+                $('.tTip').tooltip({
+                    position: {
+                        my: "center bottom",
+                        at: "center top-10",
+                        collision: "flip",
+                        using: function (position, feedback) {
+                            $(this).addClass(feedback.vertical)
+                                    .css(position);
+                        }
+                    }
+                });
+
+
+                CKEDITOR.replace('content');
+                $('#starRating1').mouseleave(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').removeClass('starRatingHover');
+                    $('#starRating2').addClass('starRating');
+                    $('#starRating3').removeClass('starRatingHover');
+                    $('#starRating3').addClass('starRating');
+                    $('#starRating4').removeClass('starRatingHover');
+                    $('#starRating4').addClass('starRating');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(1);
+
+                });
+
+                $('#starRating1').hover(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').removeClass('starRatingHover');
+                    $('#starRating2').addClass('starRating');
+                    $('#starRating3').removeClass('starRatingHover');
+                    $('#starRating3').addClass('starRating');
+                    $('#starRating4').removeClass('starRatingHover');
+                    $('#starRating4').addClass('starRating');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(1);
+
+                });
+
+                $('#starRating2').mouseleave(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').removeClass('starRatingHover');
+                    $('#starRating3').addClass('starRating');
+                    $('#starRating4').removeClass('starRatingHover');
+                    $('#starRating4').addClass('starRating');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(2);
+
+                });
+
+                $('#starRating2').hover(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').removeClass('starRatingHover');
+                    $('#starRating3').addClass('starRating');
+                    $('#starRating4').removeClass('starRatingHover');
+                    $('#starRating4').addClass('starRating');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(2);
+
+                });
+
+                $('#starRating3').mouseleave(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').addClass('starRatingHover');
+                    $('#starRating4').removeClass('starRatingHover');
+                    $('#starRating4').addClass('starRating');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(3);
+
+                });
+
+                $('#starRating3').hover(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').addClass('starRatingHover');
+                    $('#starRating4').removeClass('starRatingHover');
+                    $('#starRating4').addClass('starRating');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(3);
+
+                });
+
+                $('#starRating4').mouseleave(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').addClass('starRatingHover');
+                    $('#starRating4').addClass('starRatingHover');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(4);
+
+                });
+
+                $('#starRating4').hover(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').addClass('starRatingHover');
+                    $('#starRating4').addClass('starRatingHover');
+                    $('#starRating5').removeClass('starRatingHover');
+                    $('#starRating5').addClass('starRating');
+                    $('#rating').val(4);
+
+                });
+
+                $('#starRating5').mouseleave(function () {
+
+                    $('#starRating1').addClass('starRatingHover');
+                    $('#starRating2').addClass('starRatingHover');
+                    $('#starRating3').addClass('starRatingHover');
+                    $('#starRating4').addClass('starRatingHover');
+                    $('#starRating5').addClass('starRatingHover');
+                    $('#rating').val(5);
+
+                });
+
+            </script>
+
+            <br><br>
+
+        </div>
+    </div>
+</div>

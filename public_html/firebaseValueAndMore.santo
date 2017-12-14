@@ -1,0 +1,68 @@
+_e 
+
+	[object Object] Another object to explore
+
+
+ge 
+
+	https://groceryhunter-566f6.firebaseio.com/mylist
+
+me 
+
+	.priority
+
+
+val 
+
+
+	function (){return r.validateArgCount("DataSnapshot.val",0,0,arguments.length),this._e.val()}
+
+
+exportVal 
+
+
+	function (){return r.validateArgCount("DataSnapshot.exportVal",0,0,arguments.length),this._e.val(!0)}
+
+
+toJSON 
+
+	function (){return r.validateArgCount("DataSnapshot.toJSON",0,1,arguments.length),this.exportVal()}
+
+
+exists
+
+	function (){return r.validateArgCount("DataSnapshot.exists",0,0,arguments.length),!this._e.isEmpty()}
+	
+
+ child 
+ 
+	function (t){r.validateArgCount("DataSnapshot.child",0,1,arguments.length),t+="",i.validatePathString("DataSnapshot.child",1,t,!1);var n=new o.Path(t),s=this.ge.child(n);return new e(this._e.getChild(n),s,a.PRIORITY_INDEX)}
+ 
+ hasChild 
+ 
+	function (e){r.validateArgCount("DataSnapshot.hasChild",1,1,arguments.length),i.validatePathString("DataSnapshot.hasChild",1,e,!1);var t=new o.Path(e);return!this._e.getChild(t).isEmpty()}
+ 
+ getPriority 
+
+	
+	function (){return r.validateArgCount("DataSnapshot.getPriority",0,0,arguments.length),this._e.getPriority().val()}
+ 
+
+forEach 
+	
+	function (t){var n=this;return r.validateArgCount("DataSnapshot.forEach",1,1,arguments.length),r.validateCallback("DataSnapshot.forEach",1,t,!1),!this._e.isLeafNode()&&!!this._e.forEachChild(this.me,function(r,i){return t(new e(i,n.ge.child(r),a.PRIORITY_INDEX))})}
+
+
+hasChildren 
+
+		function (){return r.validateArgCount("DataSnapshot.hasChildren",0,0,arguments.length),!this._e.isLeafNode()&&!this._e.isEmpty()}
+
+key
+
+numChildren 
+
+
+getRef 
+
+
+ref

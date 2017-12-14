@@ -1,0 +1,310 @@
+html {height: 100%;}
+body{
+    min-height: 100%;
+}
+
+a {
+    font-size: 15px;
+    color: darkgreen;
+}
+
+.listing {
+    min-height: 300px !important;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.carousel-inner img {
+    width: 100%; 
+    margin: auto;
+    min-height:200px;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; 
+    }
+}
+
+td, th{
+    text-align: center;
+
+}
+
+.starRating {
+
+    background-image: url('../img/starNotSelected.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 40px;
+    background-position:center;
+}
+
+.starRating:hover {
+    background-image: url('../img/star.png');
+    background-size: 44px 40px;
+
+
+}
+
+.starRatingHover {
+    background-image: url('../img/star.png');
+    background-size: 44px 40px;
+    height: 40px;
+}
+
+div#reviewAVG {
+    text-align: center;
+    background: #CAFFBD;
+}
+
+.userReview {
+    border-bottom: 1px #999 solid;
+}
+
+div#reviewTitle {
+    background: #a1c17b;
+    color: #FFF;
+    text-align: center;
+}
+
+div#helpful {
+    border: 1px solid #999;
+    float: right;
+    margin-top: -100px;
+    text-align: center;
+}
+
+span.glyphicon.glyphicon-menu-hamburger {
+    font-size: 32px;
+    color: darkgreen;
+}
+
+ul.dropdown-menu {
+    background: #CAFFBD;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #CAFFBD;
+    text-decoration: none;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #CAFFBD;
+    background-image: none;
+}
+
+.progress-bar {
+    background: green;
+}
+.progress {
+    background: #000;
+}
+
+.levelUp{
+    background: #9E9E9E;
+    color: #FFF;
+    border-radius: 38px;
+}
+
+p#totalPoints1 {
+    font-size: 20px;
+}
+
+.badger{
+    margin-bottom: -24px;
+    position: relative;
+    left: 0;
+    top: 9px;
+    z-index: 999;
+}
+
+.dash {
+    text-align: center;
+}
+
+a.insetshadow {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: darkgreen;
+    text-shadow: -1px -1px 1px green, 2px 2px 1px #CAFFBD;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+}
+
+nav a:hover,
+nav a:focus {
+    outline: none;
+    color: #000;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+.circlehover a::before,
+.circlehover a::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    border: 2px solid green;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.circlehover a::after {
+    width: 45px;
+    height: 45px;
+    border-width: 6px;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.circlehover a:hover::before,
+.circlehover a:hover::after,
+.circlehover a:focus::before,
+.circlehovera:focus::after {
+    opacity: 0.5;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+input#search {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #CAFFBD;
+    background-image: url('../img/searchIcon.png');
+    background-size: 30px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input:focus#search {
+    width: 100%;
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+div#contentPortion {
+    min-height: 80vh;
+}
+
+h1.ui-loader-header {
+    display: none;
+}
+
+#searchclear {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.addPop {
+    width: 200px;
+    height: 100px;
+    background: greenyellow;
+    position: absolute;
+    top: 42px;
+    left: 50px;
+}
+
+.addPop:before {
+    content:'';
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    border-bottom: solid 15px greenyellow;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+}
+.ui-tooltip {
+    position: absolute;
+    max-width: 40%;
+    text-align: center;
+    box-shadow: none;
+    padding: 0;
+    background: darkgreen;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+.ui-tooltip-content {
+    color: white;
+    position: relative;
+    padding: 0.5em;
+}
+.ui-tooltip-content::after, .ui-tooltip-content::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    display: block;
+    left: 50%;
+}
+.bottom .ui-tooltip-content::before {
+    bottom: -10px;
+    border-color: #AAA transparent;
+    border-width: 10px 10px 0;
+}
+.bottom .ui-tooltip-content::after {
+    bottom: -7px;
+    border-color: darkgreen transparent;
+    border-width: 10px 10px 0;
+}
+.top .ui-tooltip-content::before {
+    top: -10px;
+    border-color: #AAA transparent;
+    border-width: 0 10px 10px;
+}
+.top .ui-tooltip-content::after {
+    top: -7px;
+    border-color: white transparent;
+    border-width: 0 10px 10px;
+}
+
+.ui-helper-hidden-accessible{
+    display: none;
+}

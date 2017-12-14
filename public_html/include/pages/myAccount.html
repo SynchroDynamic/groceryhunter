@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row content">
+
+        <div class="col-sm-12">
+            <div class="well">
+                <h4>Dashboard</h4>
+                <div style='float:right; margin-top: -45px;'>
+                    <p id="nextLevel"></p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-3 dash">
+                    <div class="well">
+                        <h4><span class="glyphicon glyphicon-fire" aria-hidden="true" style='color:orange;'></span> Points</h4>
+                        <p id='totalPoints1'></p> 
+                        <div class="well levelUp">
+                            <h4 style="display: inline-block"><span class="glyphicon glyphicon-signal" aria-hidden="true" style='color:green;'></span> Level</h4>
+                            <p id='level'></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <h3>Product Contributions</h3>
+                    <div class="col-sm-12 productBoard" style="display: flex;">                        
+                        <div class="col-sm-4" style="flex:1;">
+                            <div class="well dash">
+                                <h4>Products Added</h4>
+                                <p id='pAdd'></p> 
+                                <p id='pAddPoints'></p>                        
+                            </div>
+                        </div>
+                        <div class="col-sm-4" style="flex:1;">
+                            <div class="well dash">
+                                <h4>Products Edits</h4>
+                                <p id='pEdit'></p> 
+                                <p id='pEditPoints'></p>                        
+                            </div>
+                        </div>
+                        <div class="col-sm-4" style="flex:1;">
+                            <div class="well dash">
+                                <h4>Product Reviews</h4>
+                                <p id="prReview"></p>
+                                <p id="pReviewPoints"></p>
+                                <p id="reviewReliability"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="well dash">
+                        <h4><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color: green; font-size: 20px;"></span>  Flag Points</h4>
+                        <p id='pFlags'></p> 
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="well dash">
+                        <h4><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color: red; font-size: 20px;"></span>  Flags Against</h4>
+                        <p id='pFlagsAgainst'></p> 
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="well dash">
+                        <h6>Address Reliability</h6>
+                        <p id='pRel'></p> 
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="well dash">
+                        <h6>Review Reliability</h6>
+                        <p id='rRel'></p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
