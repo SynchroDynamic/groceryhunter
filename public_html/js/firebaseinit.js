@@ -123,12 +123,7 @@ $(document).ready(function () {
 
 // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyDePVoyI96tUeBV8gkNw-Od8iysXab5yng",
-            authDomain: "groceryhunter-566f6.firebaseapp.com",
-            databaseURL: "https://groceryhunter-566f6.firebaseio.com",
-            projectId: "groceryhunter-566f6",
-            storageBucket: "groceryhunter-566f6.appspot.com",
-            messagingSenderId: "713368578645"
+            //Provide your own config here. Provided when you create a database in firebase***
         };
         firebase.initializeApp(config);
         var dbRef = firebase.database().ref('/');
